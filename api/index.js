@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 const User = require("./models/User")
-const cookiesParser = require("cookie-parser")
+const cookieParser = require("cookie-parser")
 require("dotenv").config()
 
 const app = express()
@@ -12,7 +12,7 @@ const bcryptSalt = bcrypt.genSaltSync(12)
 const jwtSecret = "gosgo58368gergk23"
 
 app.use(express.json())
-app.use(cookiesParser())
+app.use(cookieParser())
 app.use(
   cors({
     credentials: true,
