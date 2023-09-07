@@ -47,7 +47,7 @@ function LoginPage() {
           <button className="primary">Login</button>
         </form>
         <p className="text-gray-500">
-          Don't have an account yet?{" "}
+          Do not have an account yet?{" "}
           <Link to={"/register"} className="underline text-black">
             Register now
           </Link>
