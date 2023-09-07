@@ -6,7 +6,7 @@ function RegisterPage() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  async function registerUser(ev) {
+  async function handleRegister(ev) {
     ev.preventDefault()
     try {
       await axios.post("/register", {
@@ -24,7 +24,7 @@ function RegisterPage() {
     <div className="mt-4 grow flex items-center justify-around">
       <div className="mb-40">
         <h1 className="text-4xl text-center mb-4">Register</h1>
-        <form className="max-w-md mx-auto mb-3" onSubmit={registerUser}>
+        <form className="max-w-md mx-auto mb-3" onSubmit={handleRegister}>
           <input
             type="text"
             placeholder="name"
